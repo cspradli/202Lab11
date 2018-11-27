@@ -39,6 +39,8 @@ public class TestLinkedList<E> {
 
     public void concat(TestLinkedList<E> list2 ) { 
         // TO DO: Complete the body of this method.
+        tail.next = list2.head.next;
+        tail = list2.tail;
     }
 
     @Override
