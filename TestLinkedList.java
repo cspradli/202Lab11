@@ -23,17 +23,12 @@ public class TestLinkedList<E> {
 
     public void add(E item) {
         head.next = new Node(item, head.next);
-        if (size == 0) tail = head.next;
+        if (head == tail) tail = head.next;
     }
 
     public int size() {
         // TO DO: Complete the body of this method.
         int size = 0;
-        Node current = head.next;
-        while (current != null){
-            size++;
-            current = current.next;
-        }
         return size;
     }
 
@@ -45,15 +40,15 @@ public class TestLinkedList<E> {
 
     @Override
     public String toString () {
-    if (size == 0) return "[ ]";
-    StringBuilder sb = new StringBuilder ("["); 
-    Node current = head . next ;
-    while ( current . next != null ) {
-        sb.append(current.data + ", ");
-        current = current.next;
-    }
-    sb.append(current.data + "]\n"); 
-    return sb.toString();
+        if (head == tail) return "[ ]";
+        StringBuilder sb = new StringBuilder ("["); 
+        Node current = head . next ;
+        while ( current . next != null ) {
+            sb.append(current.data + ", ");
+            current = current.next;
+        }
+        sb.append(current.data + "]\n"); 
+        return sb.toString();
     }
 
     public static void main(String [] args) { 
