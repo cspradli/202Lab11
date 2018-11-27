@@ -1,3 +1,8 @@
+/**
+ * @author Caleb Spradlin
+ * @version November 26, 2018
+ */
+
 public class TestLinkedList<E> { 
     private Node head ;
     private Node tail ;
