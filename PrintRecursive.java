@@ -27,6 +27,9 @@ public class PrintRecursive{
             System.out.println("This was written by call number " + a);
             recursivePrint(a+1, b, c);
         }
+        if (c && a != 0){
+            System.out.println("This was ALSO written by call number " + a);
+        }
     }
 
     public static void main(String[] args) {
