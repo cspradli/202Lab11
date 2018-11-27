@@ -1,6 +1,7 @@
 public class TestLinkedList<E> { 
     private Node head ;
     private Node tail ;
+    //private int size = 0;
 
     private class Node { 
         private E data ;
@@ -28,8 +29,17 @@ public class TestLinkedList<E> {
 
     public int size() {
         // TO DO: Complete the body of this method.
-        int size = 0;
-        return size;
+        Node current = head.next;
+        //size(current);
+        return size(current, 0);
+    }
+
+    private int size(Node current, int size){
+        if (current == null){
+            return size;
+        }
+        size++;
+        return size(current.next, size);
     }
 
     public void concat(TestLinkedList<E> list2 ) { 
