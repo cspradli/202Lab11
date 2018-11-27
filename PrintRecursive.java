@@ -6,8 +6,14 @@ public class PrintRecursive{
 
     private static void recursivePrint(int a, int b, boolean c){
         if (a == b){
-            System.out.println("   This was written by call number " + a);
-            System.out.println("   This was ALSO written by call number " + a);
+            for(int i = 0; i < (a-1); i++){
+                System.out.print(" ");
+            }
+            System.out.println("This was written by call number " + a);
+            for(int i = 0; i < (a-1); i++){
+                System.out.print(" ");
+            }
+            System.out.println("This was ALSO written by call number " + a);
             c = true;
             recursivePrint(a-1, b, c);
         }
@@ -29,5 +35,6 @@ public class PrintRecursive{
 
     public static void main(String[] args) {
         recursivePrint(1, 4);
+        recursivePrint(2, 8);
     }
 }
