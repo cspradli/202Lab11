@@ -28,6 +28,12 @@ public class TestLinkedList<E> {
 
     public int size() {
         // TO DO: Complete the body of this method.
+        int size = 0;
+        Node current = head.next;
+        while (current != null){
+            size++;
+            current = current.next;
+        }
         return size;
     }
 
