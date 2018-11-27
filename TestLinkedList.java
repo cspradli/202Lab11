@@ -68,12 +68,15 @@ public class TestLinkedList<E> {
         listA .add("two");
         listA .add("one");
         System.out.println("List A: " + listA);
+        System.out.println("List A Size: " + listA.size());
         listB.add("six ") ;
         listB.add("five");
         listB.add("four");
         System.out.println("List B: " + listB);
+        System.out.println("List B Size: " + listB.size());
         listA.concat(listB);
         System.out.println("Concatenated lists : " + listA);
+        System.out.println(listA.size());
         }
 }
 
