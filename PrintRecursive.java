@@ -11,15 +11,14 @@ public class PrintRecursive{
             c = true;
             recursivePrint(a-1, b, c);
         }
-        if(!c){
+        else if (!c){
             for(int i = 0; i < (a-1); i++){
                 System.out.print(" ");
             }
             System.out.println("This was written by call number " + a);
             recursivePrint(a+1, b, c);
         }
-        if (c && a > 0){
-            //System.out.println("test");
+        else if (c && a > 0){
             for(int i = 0; i < (a-1); i++){
                 System.out.print(" ");
             }
