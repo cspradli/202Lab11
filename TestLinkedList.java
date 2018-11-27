@@ -1,7 +1,6 @@
 public class TestLinkedList<E> { 
     private Node head ;
     private Node tail ;
-    //private int size = 0;
 
     private class Node { 
         private E data ;
@@ -30,7 +29,6 @@ public class TestLinkedList<E> {
     public int size() {
         // TO DO: Complete the body of this method.
         Node current = head.next;
-        //size(current);
         return size(current, 0);
     }
 
